@@ -1,24 +1,41 @@
+<!--
+File: index.html
+Author: Erős István
+Copyright: 2023, Erős István
+Group: Szoft I-2 N
+Date: 2023-03-09
+Github: https://github.com/erosistvan/
+Licenc: GNU GPL   
+-->
+
 <!DOCTYPE html>
 <html lang="hu">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Triangle</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="container">
+        <h1>Háromszög területszámítás</h1>
+        <h2>Adhoc feladat</h2>
 
         <div class="triangleForm">
             <div class="mt-3">
-                <label for="base" class="form-label">Alap</label>
+                <label for="base" class="form-label">Alap (cm)</label>
                 <input type="text" id="base" class="form-control">
             </div>
             <div class="mt-3">
-                <label for="height" class="form-label">Magasság</label>
+                <label for="height" class="form-label">Magasság (cm)</label>
                 <input type="text" id="height" class="form-control">
             </div>
-            <button id="calcButton" class="btn btn-primary">Számít</button>
+            
+            <button id="calcButton" 
+            class="btn btn-primary mt-3">Számít</button>
+            
             <div class="mt-3">
                 <label for="area" class="form-label">Terület</label>
                 <input type="text" id="area" class="form-control">
@@ -26,6 +43,11 @@
         </div>
 
     </div>
+
+    <div class="about">
+        Nagy János, 2023-03-09, <br>Szoft I-2 N
+    </div>
+
     <script src="app.js"></script>
 </body>
 </html>

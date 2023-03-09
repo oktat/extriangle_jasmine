@@ -1,0 +1,20 @@
+/*
+* File: style.css
+* Author: Erős István
+* Copyright: 2023, Erős István
+* Group: Szoft I-2 N
+* Date: 2023-03-09
+* Github: https://github.com/erosistvan/
+* Licenc: GNU GPL
+*/
+
+.about {
+    background-color: aqua;
+    border-top: 3px solid gold;
+    position: fixed;
+    width: 600px;
+    text-align: center;
+    top: 50px;
+    right: -230px;
+    transform: rotate(45deg);
+}
