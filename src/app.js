@@ -38,6 +38,13 @@ function calcTriangleArea(base, height) {
 }
 
 function checkInput(input) {
+    if(input<1) {
+        throw new Error('Hiba! 1-nél kisebb érték!')
+    }
     let res = input.match(/^[0-9]+$/);
-    return res;
+    if(res) {
+        return true;
+    }else {
+        return false;
+    }
 }

@@ -15,17 +15,28 @@ describe('Az app.js tesztjei', () => {
 });
 
 describe('A bevitel ellenőrzésének tesztelése', () => {
-    it('Az "a" bemenetre null-t várunk', () => {
+    it('Az "a" bemenetre false-t várunk', () => {
         let actual = checkInput('a');
-        expect(actual).toBeNull();
+        expect(actual).toBeFalse();
     });
-    it('Az "cica" bemenetre null-t várunk', () => {
+    it('Az "cica" bemenetre false-t várunk', () => {
         let actual = checkInput('cica');
-        expect(actual).toBeNull();
+        expect(actual).toBeFalse();
     });    
     it('Az 33 bemenetre nem null-t várunk', () => {
         let actual = checkInput('33');
         expect(actual).not.toBeNull();
     });
-})
+    it('Hibát dob ha kisebb 1-nél az éréték?', () => {        
+        expect(() => {
+            checkInput('-3')
+        }).toThrow();
+    });
+    it('Megadott hibát dob 1-nél kisebb érték esetén?', () => {        
+        expect(() => {
+            checkInput('-3')
+        }).toThrow(new Error('Hiba! 1-nél kisebb érték!'));
+    });
+
+});
 
